@@ -67,7 +67,7 @@ namespace SqlDataGenerator
                 {
                     FkKierowcaId = (b + 1).ToString();
                     Program.zajKierowcy[b, a - 1] = true;
-                    sw.WriteLine("insert into WynajemPojedynczegoPojazdu values(" + FkWynajemId + ", '" + FkPojazdNrRejestracyjny + "'," + "'" + FkKierowcaId + "'" + "," + Cena + "," + CzasNajmu + ")");
+                    sw.WriteLine("insert into WynajemPojedynczegoPojazdu values(" + FkWynajemId + ", '" + FkPojazdNrRejestracyjny + "',"  + FkKierowcaId + "," + Cena + "," + CzasNajmu + ")");
                 }
                     
                 

@@ -48,7 +48,7 @@ namespace SqlDataGenerator
             n = nazwiska[0];
             int LiczbaNazwisk = Int32.Parse(n);
 
-            for (int i = 1; i < LiczbaKierowcow; i++)
+            for (int i = 1; i <= LiczbaKierowcow; i++)
             {
                 int im = rnd.Next(1, LiczbaImion + 1);
 
