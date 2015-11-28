@@ -1,0 +1,396 @@
+395
+Acura ILX
+Acura ILX Hybrid
+Acura MDX
+Acura RDX
+Acura RL
+Acura RLX
+Acura TL
+Acura TLX
+Acura TSX
+Acura TSX Sport Wagon
+Acura ZDX
+Audi A3
+Audi A3 e-tron
+Audi A4
+Audi A6
+Audi A7
+Audi A8
+Audi allroad
+Audi Q3
+Audi Q5
+Audi Q7
+Audi RS 7
+Audi S3
+Audi S4
+Audi S6
+Audi S7
+Audi S8
+Audi SQ5
+Audi TT
+Audi TTS
+BMW 3 Series
+BMW 3 Series Gran Turismo
+BMW 4 Series Gran Coupe
+BMW 5 Series
+BMW 5 Series Gran Turismo
+BMW 6 Series Gran Coupe
+BMW 7 Series
+BMW ActiveHybrid 5
+BMW ActiveHybrid 7
+BMW ActiveHybrid X6
+BMW ALPINA B6 Gran Coupe
+BMW ALPINA B7
+BMW i3
+BMW M3
+BMW M5
+BMW M6 Gran Coupe
+BMW X1
+BMW X3
+BMW X4
+BMW X5
+BMW X5 M
+BMW X6
+BMW X6 M
+Buick Anthem
+Buick Enclave
+Buick Encore
+Buick LaCrosse
+Buick Lucerne
+Buick Regal
+Buick Verano
+Cadillac ATS
+Cadillac ATS-V
+Cadillac CTS
+Cadillac CTS Coupe
+Cadillac CTS Wagon
+Cadillac CTS-V
+Cadillac CTS-V Coupe
+Cadillac CTS-V Wagon
+Cadillac DTS
+Cadillac Escalade
+Cadillac Escalade ESV
+Cadillac Escalade Hybrid
+Cadillac SRX
+Cadillac STS
+Cadillac XTS
+Chevrolet Aveo
+Chevrolet Captiva Sport
+Chevrolet City Express
+Chevrolet Cobalt
+Chevrolet Colorado
+Chevrolet Cruze
+Chevrolet Equinox
+Chevrolet HHR
+Chevrolet Impala
+Chevrolet Impala Limited
+Chevrolet Malibu
+Chevrolet Malibu Hybrid
+Chevrolet Silverado 1500
+Chevrolet Silverado 2500HD
+Chevrolet Silverado 3500HD
+Chevrolet Sonic
+Chevrolet Spark
+Chevrolet Spark EV
+Chevrolet SS
+Chevrolet Suburban
+Chevrolet Tahoe
+Chevrolet Tahoe Hybrid
+Chevrolet Traverse
+Chevrolet Trax
+Chevrolet Volt
+Chrysler 200
+Chrysler 300
+Chrysler PT Cruiser
+Chrysler Sebring
+Chrysler Town and Country
+Dodge Avenger
+Dodge Caliber
+Dodge Charger
+Dodge Dakota
+Dodge Dart
+Dodge Durango
+Dodge Grand Caravan
+Dodge Journey
+Dodge Journey
+Dodge Nitro
+FIAT 500
+FIAT 500e
+FIAT 500L
+Ford C-Max Energi
+Ford C-Max Hybrid
+Ford Crown Victoria
+Ford Edge
+Ford Escape
+Ford Escape Hybrid
+Ford Expedition
+Ford Explorer
+Ford Fiesta
+Ford Flex
+Ford Focus
+Ford Focus ST
+Ford Fusion
+Ford Fusion Energi
+Ford Fusion Hybrid
+Ford Taurus
+Ford Transit Connect
+GMC Acadia
+GMC Canyon
+GMC Sierra 1500
+GMC Sierra 2500HD
+GMC Sierra 3500HD
+GMC Terrain
+GMC Yukon
+GMC Yukon Hybrid
+GMC Yukon XL
+Honda Accord
+Honda Accord Crosstour
+Honda Accord Hybrid
+Honda Accord Plug-In Hybrid
+Honda Civic
+Honda CR-V
+Honda CR-Z
+Honda Crosstour
+Honda Element
+Honda Fit
+Honda Fit EV
+Honda HR-V
+Honda Insight
+Honda Odyssey
+Honda Pilot
+HUMMER H3
+Hyundai Accent
+Hyundai Azera
+Hyundai Elantra
+Hyundai Elantra GT
+Hyundai Elantra Touring
+Hyundai Equus
+Hyundai Genesis
+Hyundai Santa Fe
+Hyundai Santa Fe
+Hyundai Santa Fe Sport
+Hyundai Sonata
+Hyundai Sonata Hybrid
+Hyundai Tucson
+Hyundai Veloster
+Hyundai Veracruz
+Infiniti EX
+Infiniti EX35
+Infiniti FX
+Infiniti FX35
+Infiniti FX50
+Infiniti G Sedan
+Infiniti G37 Sedan
+Infiniti JX
+Infiniti M
+Infiniti M35
+Infiniti M37
+Infiniti M45
+Infiniti M56
+Infiniti Q40
+Infiniti Q50
+Infiniti Q70
+Infiniti QX
+Infiniti QX50
+Infiniti QX56
+Infiniti QX60
+Infiniti QX70
+Infiniti QX80
+Jaguar XF
+Jaguar XJ
+Jeep Cherokee
+Jeep Commander
+Jeep Compass
+Jeep Grand Cherokee
+Jeep Grand Cherokee SRT
+Jeep Liberty
+Jeep Patriot
+Jeep Renegade
+Jeep Wrangler
+Kia Cadenza
+Kia Forte
+Kia K900
+Kia Optima
+Kia Rio
+Kia Sedona
+Kia Sorento
+Kia Soul
+Kia Soul EV
+Kia Sportage
+Land Rover Discovery Sport
+Land Rover LR2
+Land Rover LR4
+Land Rover Range Rover
+Land Rover Range Rover Evoque
+Land Rover Range Rover Sport
+Lexus CT 200h
+Lexus ES 300h
+Lexus ES 350
+Lexus GS 350
+Lexus GS 450h
+Lexus GS 460
+Lexus GX 460
+Lexus HS 250h
+Lexus IS 250
+Lexus IS 350
+Lexus IS F
+Lexus LS 460
+Lexus LS 600h L
+Lexus LX 570
+Lexus NX 200t
+Lexus NX 300h
+Lexus RX 350
+Lexus RX 450h
+Lincoln MKC
+Lincoln MKS
+Lincoln MKT
+Lincoln MKX
+Lincoln MKZ
+Lincoln MKZ Hybrid
+Lincoln Navigator
+Lincoln Town Car
+Mazda CX-5
+Mazda CX-7
+Mazda CX-9
+Mazda Mazda2
+Mazda Mazda3
+Mazda Mazda5
+Mazda Mazda6
+Mazda Mazdaspeed3
+Mazda Tribute
+Mercedes-Benz B-Class Electric Drive
+Mercedes-Benz C-Class
+Mercedes-Benz CLA-Class
+Mercedes-Benz CLS-Class
+Mercedes-Benz E-Class
+Mercedes-Benz G-Class
+Mercedes-Benz GL-Class
+Mercedes-Benz GLA-Class
+Mercedes-Benz GLK-Class
+Mercedes-Benz M-Class
+Mercedes-Benz R-Class
+Mercedes-Benz S-Class
+Mercury Grand Marquis
+Mercury Mariner
+Mercury Mariner Hybrid
+Mercury Milan
+Mercury Milan Hybrid
+Mercury Mountaineer
+MINI Cooper
+MINI Cooper Clubman
+MINI Cooper Countryman
+MINI Cooper Coupe
+MINI Cooper Paceman
+Mitsubishi Eclipse
+Mitsubishi Endeavor
+Mitsubishi Galant
+Mitsubishi i-MiEV
+Mitsubishi Lancer
+Mitsubishi Lancer Evolution
+Mitsubishi Lancer Sportback
+Mitsubishi Mirage
+Mitsubishi Outlander
+Mitsubishi Outlander Sport
+Nissan Altima
+Nissan Altima Hybrid
+Nissan Armada
+Nissan Cube
+Nissan Juke
+Nissan Leaf
+Nissan Maxima
+Nissan Murano
+Nissan Murano CrossCabriolet
+Nissan NV200
+Nissan Pathfinder
+Nissan Quest
+Nissan Rogue
+Nissan Rogue Select
+Nissan Sentra
+Nissan Versa
+Nissan Versa Note
+Nissan Xterra
+Pontiac G6
+Pontiac Vibe
+Porsche Cayenne
+Porsche Macan
+Porsche Panamera
+Ram C/V Cargo Van
+Ram C/V Tradesman
+Ram CV Tradesman
+Ram Dakota
+Ram ProMaster City
+Rolls-Royce Ghost
+Rolls-Royce Phantom
+Saab 41885
+Saab 41887
+Saab 9-3 Griffin
+Saab 9-4X
+Scion iQ
+Scion tC
+Scion xB
+Scion xD
+smart fortwo
+Subaru Forester
+Subaru Impreza
+Subaru Impreza WRX
+Subaru Legacy
+Subaru Outback
+Subaru Tribeca
+Subaru WRX
+Subaru XV Crosstrek
+Suzuki Equator
+Suzuki Grand Vitara
+Suzuki Kizashi
+Suzuki SX4
+Tesla Model S
+Tesla Model X
+Toyota 4Runner
+Toyota Avalon
+Toyota Avalon Hybrid
+Toyota Camry
+Toyota Camry Hybrid
+Toyota Corolla
+Toyota FJ Cruiser
+Toyota Highlander
+Toyota Highlander Hybrid
+Toyota Land Cruiser
+Toyota Matrix
+Toyota Prius
+Toyota Prius c
+Toyota Prius Plug-in
+Toyota Prius v
+Toyota RAV4
+Toyota RAV4 EV
+Toyota Sequoia
+Toyota Sienna
+Toyota Tacoma
+Toyota Tundra
+Toyota Venza
+Toyota Yaris
+Volkswagen Beetle
+Volkswagen CC
+Volkswagen e-Golf
+Volkswagen GLI
+Volkswagen Golf
+Volkswagen Golf R
+Volkswagen Golf SportWagen
+Volkswagen GTI
+Volkswagen Jetta
+Volkswagen Jetta GLI
+Volkswagen Jetta Hybrid
+Volkswagen Jetta SportWagen
+Volkswagen New Beetle
+Volkswagen Passat
+Volkswagen Routan
+Volkswagen Tiguan
+Volkswagen Touareg
+Volvo C30
+Volvo S40
+Volvo S60
+Volvo S80
+Volvo V50
+Volvo V60
+Volvo V70
+Volvo XC60
+Volvo XC70
+Volvo XC90

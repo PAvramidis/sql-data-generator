@@ -1,0 +1,445 @@
+444
+Warszawa
+Krakow
+Lodz
+Wroclaw
+Poznan
+Gdansk
+Szczecin
+Bydgoszcz
+Lublin
+Katowice
+Bialystok
+Gdynia
+Czestochowa
+Radom
+Sosnowiec
+Torun
+Kielce
+Rzeszow
+Gliwice
+Zabrze
+Olsztyn
+Bielsko-Biala
+Bytom
+Ruda slaska
+Rybnik
+Zielona Gora
+Tychy
+Gorzow Wielkopolski
+Dabrowa Gornicza
+Elblag
+Plock
+Opole
+Walbrzych
+Wloclawek
+Tarnow
+Chorzow
+Koszalin
+Kalisz
+Legnica
+Grudziadz
+Jaworzno
+Slupsk
+Jastrzebie-Zdroj
+Nowy Sacz
+Jelenia Gora
+Siedlce
+Konin
+Piotrkow Trybunalski
+Myslowice
+Inowroclaw
+Pila
+Lubin
+Ostrow Wielkopolski
+Ostrowiec swietokrzyski
+Gniezno
+Suwalki
+Stargard Szczecinski
+Glogow
+Siemianowice slaskie
+Pabianice
+Zamosc
+Chelm
+Leszno
+Tomaszow Mazowiecki
+Przemysl
+Stalowa Wola
+Kedzierzyn-Kozle
+Lomza
+Zory
+Tarnowskie Gory
+Mielec
+Tczew
+Elk
+Pruszkow
+Belchatow
+swidnica
+Bedzin
+Biala Podlaska
+Zgierz
+Piekary slaskie
+Raciborz
+Legionowo
+Ostroleka
+swietochlowice
+Zawiercie
+Starachowice
+Wejherowo
+Pulawy
+Wodzislaw slaski
+Skierniewice
+Starogard Gdanski
+Tarnobrzeg
+Rumia
+Radomsko
+Skarzysko-Kamienna
+Krosno
+Kolobrzeg
+Debica
+Piaseczno
+Kutno
+Otwock
+Nysa
+Ciechanow
+Zdunska Wola
+Sieradz
+Swinoujscie
+Zyrardow
+Szczecinek
+Minsk Mazowiecki
+swidnik
+Chojnice
+Mikolow
+Nowa Sol
+Boleslawiec
+Oswiecim
+Malbork
+Knurow
+Sanok
+Jaroslaw
+Kwidzyn
+Zary
+Chrzanow
+Sopot
+Wolomin
+Olesnica
+Sochaczew
+Brzeg
+Olkusz
+Jaslo
+Cieszyn
+Czechowice-Dziedzice
+Krasnik
+Lebork
+Dzierzoniow
+Ostroda
+Nowy Targ
+Police
+Ilawa
+Zabki
+Czeladz
+Myszkow
+Olawa
+Zywiec
+Zgorzelec
+Swarzedz
+Bielawa
+Mlawa
+Lubon
+Lukow
+Augustow
+Grodzisk Mazowiecki
+Bochnia
+srem
+Gizycko
+Wrzesnia
+Marki
+Krotoszyn
+Pruszcz Gdanski
+Lowicz
+Brodnica
+Nowy Dwor Mazowiecki
+Czerwionka-Leszczyny
+Gorlice
+Turek
+Ketrzyn
+Klodzko
+Zakopane
+Wyszkow
+Bilgoraj
+Zagan
+Jarocin
+swiecie
+Bielsk Podlaski
+Walcz
+Pszczyna
+Wagrowiec
+Bialogard
+Bartoszyce
+Kluczbork
+Sandomierz
+Skawina
+Szczytno
+Lubliniec
+Koscian
+Jawor
+Koscierzyna
+Reda
+Wielun
+swiebodzice
+Nowa Ruda
+Piastow
+Kolo
+Ostrow Mazowiecka
+Goleniow
+sroda Wielkopolska
+Polkowice
+Lubartow
+Laziska Gorne
+Plonsk
+Zambrow
+Grajewo
+Mragowo
+swiebodzin
+Opoczno
+Luban
+Rydultowy
+Prudnik
+Wieliczka
+Gryfino
+Dzialdowo
+Hajnowka
+Kobylka
+Aleksandrow Lodzki
+Andrychow
+Rawicz
+Chelmno
+Gostyn
+Orzesze
+Jozefow
+Trzebinia
+Ozorkow
+Konskie
+Kamienna Gora
+Tomaszow Lubelski
+Leczna
+Bierun
+Pisz
+Sulejowek
+Krasnystaw
+Chodziez
+Wadowice
+Pultusk
+Pionki
+Naklo nad Notecia
+Kety
+Gostynin
+Szamotuly
+Sokolow Podlaski
+Sokolka
+Pyskowice
+Zlotow
+Miedzyrzecz
+Sierpc
+Hrubieszow
+Oborniki
+Strzelce Opolskie
+Myslenice
+Bogatynia
+Kostrzyn nad Odra
+Kozienice
+Radlin
+Lancut
+Lask
+Konstantynow Lodzki
+Rawa Mazowiecka
+Pleszew
+Zielonka
+Trzcianka
+Sulechow
+Konstancin-Jeziorna
+Przasnysz
+Libiaz
+Braniewo
+Garwolin
+Miedzyrzec Podlaski
+Brzesko
+Radzionkow
+Bytow
+Slubice
+Deblin
+Gubin
+Gryfice
+Krapkowice
+Nowogard
+Ledziny
+Rypin
+Busko-Zdroj
+Strzegom
+Lomianki
+Grojec
+Olecko
+Milanowek
+Lidzbark Warminski
+Namyslow
+Radzyn Podlaski
+Zlotoryja
+Ustron
+Ustka
+Boguszow-Gorce
+Jelcz-Laskowice
+Lapy
+Ropczyce
+Jedrzejow
+Przeworsk
+Solec Kujawski
+Swidwin
+Zabkowice slaskie
+Choszczno
+Nisko
+Staszow
+Limanowa
+Nowy Tomysl
+Chelmza
+Kartuzy
+Lipno
+Glowno
+Siemiatycze
+Leczyca
+Skoczow
+Kepno
+Ostrzeszow
+Lubsko
+Grodzisk Wielkopolski
+Pszow
+Morag
+Wschowa
+Nidzica
+Lezajsk
+Czluchow
+Barlinek
+Znin
+Glucholazy
+Darlowo
+Debno
+Slupca
+Chojnow
+Tuchola
+Wabrzezno
+Goldap
+Wlodawa
+Wolsztyn
+Koluszki
+Mosina
+Zlocieniec
+Brwinow
+Klobuck
+Rabka-Zdroj
+Trzebnica
+Glubczyce
+Golub-Dobrzyn
+Slawno
+Wegrow
+Pyrzyce
+Brzeziny
+Wolow
+Strzelin
+Aleksandrow Kujawski
+Blonie
+Brzeg Dolny
+Lubaczow
+Paslek
+Gora
+Szprotawa
+Mogilno
+Janow Lubelski
+Szydlowiec
+Zdzieszowice
+Dabrowa Tarnowska
+Miechow
+Drawsko Pomorskie
+Krosno Odrzanskie
+Warka
+Radzymin
+Milicz
+Wegorzewo
+Gora Kalwaria
+Brzeszcze
+Mysliborz
+Wronki
+Kowary
+Nowa Deba
+Koronowo
+Puck
+Rogozno
+Niepolomice
+Wisla
+Nowe Miasto Lubawskie
+Pinczow
+Czarnkow
+Krynica-Zdroj
+Parczew
+Ozarow Mazowiecki
+Miastko
+Miedzychod
+Ciechocinek
+Wasilkow
+Biskupiec
+Kolno
+Murowana Goslina
+Dobre Miasto
+Wloszczowa
+Lobez
+Sycow
+Bystrzyca Klodzka
+Drezdenko
+Bukowno
+Sztum
+Sulecin
+Monki
+Kudowa-Zdroj
+Krzeszowice
+Trzebiatow
+Strzelce Krajenskie
+Lubawa
+Karczew
+Makow Mazowiecki
+Wladyslawowo
+Czersk
+Nowy Dwor Gdanski
+Ryki
+Blachownia
+Skwierzyna
+Puszczykowo
+Kozuchow
+Opalenica
+Czarna Bialostocka
+Pieszyce
+Poniatowa
+Szubin
+Kostrzyn
+Olesno
+Wysokie Mazowieckie
+Sucha Beskidzka
+Ustrzyki Dolne
+Sepolno Krajenskie
+Sroda slaska
+Kolbuszowa
+Chelmek
+Ozimek
+Lwowek slaski
+Pobiedziska
+Oborniki slaskie
+Orneta
+Ziebice
+Stary Sacz
+Kruszwica
+Janikowo
+Wojkowice
+Kamien Pomorski
+Zuromin
+Strzyzow
+Wolbrom
+Grodkow
+Opole Lubelskie
