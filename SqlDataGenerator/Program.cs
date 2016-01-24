@@ -57,6 +57,10 @@ namespace SqlDataGenerator
         private const string PathToInsertSql = "D:\\Generator\\Insert.sql";
         private const string PathToSqlT2 = "D:\\Generator\\T2.sql";
         public static string Path = "D:\\Generator\\";
+        public static string PathZajete = "D:\\Generator\\zajete.txt";
+        public static string PathZajKierowcy = "D:\\Generator\\zajeteKierowcy.txt";
+        public static string PathZajeteOutput = "D:\\Generator\\zajeteOutput.txt";
+        public static string PathZajKierowcyOutput = "D:\\Generator\\zajeteKierowcyOutput.txt";
 
         public static TimePoint PunktCzasowy = TimePoint.FirstTimePoint;
         private static Encja[] Encje;
@@ -64,7 +68,7 @@ namespace SqlDataGenerator
         private static StreamWriter FileWriterInsert;
         private static StreamWriter FileWriterTwo;
 
-        public static int LiczbaWynajec = 100000;
+        public static int LiczbaWynajec = 1000000;
         public static int LiczbaWynajecPojedynczegoPojazdu;
         public static int LiczbaAdresow;
         public static int LiczbaOddzialow;
@@ -83,8 +87,6 @@ namespace SqlDataGenerator
         public static bool[] zajeciKierowcy;
         public static bool[] takenRejestracje;
         public static string[] rejestracje;
-        public static bool[ , ] zajete;
-        public static bool[ , ] zajKierowcy;
 
         public static AdresPojedynczy[] Adresy;
         public static PojazdPojedynczy[] Pojazdy;
@@ -149,7 +151,7 @@ namespace SqlDataGenerator
             LiczbaAdresow = 2 * LiczbaWynajec;
             LiczbaOddzialow = LiczbaAdresow / 20;
             LiczbaKierowcow = 5 * LiczbaOddzialow;
-            LiczbaPojazdow = 3 * LiczbaKierowcow;
+            LiczbaPojazdow = 2 * LiczbaKierowcow;
 
             LiczbaWynajecDodane = LiczbaWynajec / 100;
 
@@ -172,15 +174,40 @@ namespace SqlDataGenerator
             }
             System.Console.WriteLine("Skonczyl sie excel");
 
-            
+
 
             Adresy = new AdresPojedynczy[LiczbaAdresow];
             Pojazdy = new PojazdPojedynczy[LiczbaPojazdow];
 
             zajeteAdresy = new bool[Program.LiczbaAdresow];
             zajeciKierowcy = new bool[Program.LiczbaKierowcow];
-            zajete = new bool[LiczbaPojazdow, LiczbaWynajec];
-            zajKierowcy = new bool[LiczbaKierowcow, LiczbaWynajec];
+
+            StreamWriter zajete;
+            StreamWriter zajKierowcy;
+
+            zajete = new StreamWriter(PathZajete);
+            zajKierowcy = new StreamWriter(PathZajKierowcy);
+            zajete.AutoFlush = true;
+            zajKierowcy.AutoFlush = true;
+
+
+            //for(int i = 0; i < LiczbaPojazdow; i++)
+            //{
+            //    for(int j = 0; j < LiczbaWynajec; j++)
+            //    {
+            //        zajete.Write("0");
+            //    }
+            //    zajete.WriteLine();
+            //}
+
+            //for (int i = 0; i < LiczbaKierowcow; i++)
+            //{
+            //    for (int j = 0; j < LiczbaWynajec; j++)
+            //    {
+            //        zajKierowcy.Write("0");
+            //    }
+            //    zajKierowcy.WriteLine();
+            //}
 
             Encje = new Encja[LiczbaEncji];
 
@@ -207,6 +234,8 @@ namespace SqlDataGenerator
             FileWriter.WriteLine("GO");
             FileWriter.WriteLine();
 
+            int u = 0;
+
             foreach (Encja e in Encje)
             {
                 e.Create(FileWriter);
@@ -224,7 +253,10 @@ namespace SqlDataGenerator
 
             foreach (Encja e in Encje)
             {
+                System.Console.WriteLine("Encja randomize {0}", u);
+                u++;
                 e.Randomize();
+                System.Console.WriteLine();
             }
 
             FileWriterInsert.WriteLine("USE TransakcjeWynajmu");
@@ -232,52 +264,55 @@ namespace SqlDataGenerator
             FileWriterInsert.WriteLine();
 
             FileWriterInsert.WriteLine("SET ANSI_WARNINGS  OFF;");
-
+            u = 0;
             foreach (Encja e in Encje)
             {
+                System.Console.WriteLine("Encja insert {0}", u);
+                u++;
                 e.Insert(FileWriterInsert);
+                System.Console.WriteLine();
             }
 
             FileWriterInsert.WriteLine("SET ANSI_WARNINGS  OFF;");
 
-            PunktCzasowy = TimePoint.SecondTimePoint;
+            //PunktCzasowy = TimePoint.SecondTimePoint;
 
-            Encja[] EncjeT2 = new Encja[LiczbaEncji];
+            //Encja[] EncjeT2 = new Encja[LiczbaEncji];
 
-            LiczbaKierowcow = LiczbaKierowcowDodane;
-            zajeciKierowcy = new bool[LiczbaKierowcow];
+            //LiczbaKierowcow = LiczbaKierowcowDodane;
+            //zajeciKierowcy = new bool[LiczbaKierowcow];
 
-            Adresy2 = new AdresPojedynczy[LiczbaAdresowDodane];
-            Pojazdy2 = new PojazdPojedynczy[LiczbaPojazdowDodane];
+            //Adresy2 = new AdresPojedynczy[LiczbaAdresowDodane];
+            //Pojazdy2 = new PojazdPojedynczy[LiczbaPojazdowDodane];
 
-            EncjeT2[2] = new Kierowca(LiczbaKierowcowDodane);
-            EncjeT2[0] = new Adres(LiczbaAdresowDodane);
-            EncjeT2[1] = new Oddzial(LiczbaOddzialowDodane);
-            EncjeT2[3] = new Pojazd(LiczbaPojazdowDodane);
-            EncjeT2[4] = new Wynajem(LiczbaWynajecDodane);
-            EncjeT2[5] = new WynajemPojedycznegoPojazdu(LiczbaWynajecPojedynczegoPojazduDodane);
+            //EncjeT2[2] = new Kierowca(LiczbaKierowcowDodane);
+            //EncjeT2[0] = new Adres(LiczbaAdresowDodane);
+            //EncjeT2[1] = new Oddzial(LiczbaOddzialowDodane);
+            //EncjeT2[3] = new Pojazd(LiczbaPojazdowDodane);
+            //EncjeT2[4] = new Wynajem(LiczbaWynajecDodane);
+            //EncjeT2[5] = new WynajemPojedycznegoPojazdu(LiczbaWynajecPojedynczegoPojazduDodane);
+            //foreach (Encja e in EncjeT2)
+            //{
 
-            foreach (Encja e in EncjeT2)
-            {
-                e.Randomize();
-            }
+            //    e.Randomize();
+            //}
 
-            FileWriterTwo.WriteLine("USE TransakcjeWynajmu");
-            FileWriterTwo.WriteLine("GO");
-            FileWriterTwo.WriteLine();
+            //FileWriterTwo.WriteLine("USE TransakcjeWynajmu");
+            //FileWriterTwo.WriteLine("GO");
+            //FileWriterTwo.WriteLine();
 
-            foreach (Encja e in EncjeT2)
-            {
-                e.Update(FileWriterTwo);
-            }
+            //foreach (Encja e in EncjeT2)
+            //{
+            //    e.Update(FileWriterTwo);
+            //}
 
-            FileWriterTwo.WriteLine("GO");
-            FileWriterTwo.WriteLine();
+            //FileWriterTwo.WriteLine("GO");
+            //FileWriterTwo.WriteLine();
 
-            foreach (Encja e in EncjeT2)
-            {
-                e.Insert(FileWriterTwo);
-            }
+            //foreach (Encja e in EncjeT2)
+            //{
+            //    e.Insert(FileWriterTwo);
+            //}
             wb_dest.Save();
             excel_destination.Quit();
             wb_dest_data2.Save();
@@ -304,7 +339,7 @@ namespace SqlDataGenerator
             make_arrays(ref arrayClients, excel_data_path, "Klienci", "A1", "G301");
             make_arrays(ref arrayForms, excel_data_path, "Ankiety", "A1", "B1");
             make_arrays(ref arrayPurchases, excel_data_path, "Kupno", "A1", "D1");
-            make_arrays(ref arrayDrivers, excel_data_path, "Kierowcy", "A1", "B1"); 
+            make_arrays(ref arrayDrivers, excel_data_path, "Kierowcy", "A1", "B1");
 
             Excel.Worksheet sh3 = wb_dest.Sheets.Add();
             sh3.Name = "FormularzeT1";
@@ -469,7 +504,7 @@ namespace SqlDataGenerator
                 int categories_number_one_driver;
                 for (int i = 0; i < range2; i++)
                 {
-                    for (int k = 0; k < 16; k++) 
+                    for (int k = 0; k < 16; k++)
                     {
                         takenCategories[k] = false;
                     }
@@ -480,7 +515,7 @@ namespace SqlDataGenerator
                         {
                             if (i < range)
                             {
-                                sh1.Cells[index + 2, DRIVER_ID].Value2 = (i+1).ToString();
+                                sh1.Cells[index + 2, DRIVER_ID].Value2 = (i + 1).ToString();
                             }
                             sh2.Cells[index + 2, DRIVER_ID].Value2 = (i + 1).ToString();
                         }
@@ -498,12 +533,12 @@ namespace SqlDataGenerator
                         takenCategories[rand_number] = true;
                     }
                 }
-            } 
+            }
             int max;
             int min;
             int col;
             //update 
-            if(name == "Klienci" || name == "Formularze")
+            if (name == "Klienci" || name == "Formularze")
             {
                 range = LiczbaWynajec;
                 range2 = LiczbaWynajec + LiczbaWynajecDodane;
@@ -575,7 +610,7 @@ namespace SqlDataGenerator
                 {
                     min = DATE;
                     max = COST;
-                    rand_number = rnd.Next(min, max+1);
+                    rand_number = rnd.Next(min, max + 1);
                     date = start.AddDays(gen.Next(rangeDate)).ToString();
                     if (rand_number == DATE)
                     {

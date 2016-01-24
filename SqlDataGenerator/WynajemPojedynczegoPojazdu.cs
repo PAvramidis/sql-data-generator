@@ -20,7 +20,105 @@ namespace SqlDataGenerator
         {
             LiczbaWynajecPojedynczegoPojazdu = n;
         }
+        private bool SprawdzZajetosc(int samochod, int wynajem)
+        {
+            using (StreamReader reader = new StreamReader(Program.PathZajete))
+            {
+                for (int i = 0; i < samochod; i++)
+                {
+                    reader.ReadLine();
+                }
+                string line = reader.ReadLine();
 
+                if (line[wynajem] == '1')
+                    return true;
+                else
+                    return false;
+            }
+        }
+
+        private void ZapiszZajetosc(int samochod, int wynajem)
+        {
+            string line = "";
+            int i = 0;
+            using (StreamReader reader = new StreamReader(Program.PathZajete))
+            {
+                using (StreamWriter writer = new StreamWriter(Program.PathZajeteOutput))
+                {
+                    while ((line = reader.ReadLine()) != null)
+                    {
+                        if (i != samochod)
+                        {
+                            writer.WriteLine(line);
+                            
+                        }
+                        else
+                        {
+                            string newLine = line;
+                            StringBuilder sb = new StringBuilder(newLine);
+                            sb[wynajem] = '1';
+                            newLine = sb.ToString();
+                            writer.WriteLine(newLine);
+                        }
+                        i++;
+
+                    }
+                }
+            }
+
+            File.Delete(Program.PathZajete);
+            File.Move(Program.PathZajeteOutput, Program.PathZajete);
+        }
+
+        private bool SprawdzZajetoscKier(int kierowca, int wynajem)
+        {
+            using (StreamReader reader = new StreamReader(Program.PathZajKierowcy))
+            {
+                for (int i = 0; i < kierowca; i++)
+                {
+                    reader.ReadLine();
+                }
+                string line = reader.ReadLine();
+
+                if (line[wynajem] == '1')
+                    return true;
+                else
+                    return false;
+            }
+        }
+
+        private void ZapiszZajetoscKier(int kierowca, int wynajem)
+        {
+            string line = "";
+            int i = 0;
+            using (StreamReader reader = new StreamReader(Program.PathZajKierowcy))
+            {
+                using (StreamWriter writer = new StreamWriter(Program.PathZajKierowcyOutput))
+                {
+                    while ((line = reader.ReadLine()) != null)
+                    {
+                        if (i != kierowca)
+                        {
+                            writer.WriteLine(line);
+
+                        }
+                        else
+                        {
+                            string newLine = line;
+                            StringBuilder sb = new StringBuilder(newLine);
+                            sb[wynajem] = '1';
+                            newLine = sb.ToString();
+                            writer.WriteLine(newLine);
+                        }
+                        i++;
+
+                    }
+                }
+            }
+
+            File.Delete(Program.PathZajKierowcy);
+            File.Move(Program.PathZajKierowcyOutput, Program.PathZajKierowcy);
+        }
         public override void Randomize()
         {
             System.IO.StreamWriter sw;
@@ -34,13 +132,15 @@ namespace SqlDataGenerator
 
             for (int i = 0; i < LiczbaWynajecPojedynczegoPojazdu; i++)
             {
+                System.Console.Write("\r{0}%", ((i + 1) * 100) / LiczbaWynajecPojedynczegoPojazdu);
                 do
                 {
 
                     a = rnd.Next(1, Program.LiczbaWynajec + 1);
                     b = rnd.Next(0, Program.LiczbaPojazdow);
                 }
-                while (Program.zajete[b, a-1] == true);
+                //while (SprawdzZajetosc(b, a-1) == true);
+                while (false) ;
 
 
                 int CzasNajmuNumeric = rnd.Next(1, 169);
@@ -50,7 +150,7 @@ namespace SqlDataGenerator
                 Cena = CenaInt.ToString();
                 FkWynajemId = a.ToString();
                 FkPojazdNrRejestracyjny = Program.Pojazdy[b].NrRejestracyjny.ToString();
-                Program.zajete[b, a - 1] = true;
+               // ZapiszZajetosc(b, a - 1);
 
                 temp = rnd.Next(1, 4);
                 switch (temp) 
@@ -70,7 +170,8 @@ namespace SqlDataGenerator
                 {
                     b = rnd.Next(0, Program.LiczbaKierowcow);
                 }
-                while (Program.zajKierowcy[b, a - 1] == true || b == 0);
+                //while (SprawdzZajetoscKier(b, a - 1) == true || b == 0);
+                while (false);
                 if (b == 0)
                 {
                     
@@ -80,7 +181,7 @@ namespace SqlDataGenerator
                 else
                 {
                     FkKierowcaId = (b + 1).ToString();
-                    Program.zajKierowcy[b, a - 1] = true;
+                    //ZapiszZajetoscKier(b, a - 1);
                     sw.WriteLine("insert into WynajemPojedynczegoPojazdu values(" + FkWynajemId + ", '" + FkPojazdNrRejestracyjny + "'," + FkKierowcaId + "," + Cena + "," + CzasNajmu + ",'" + TypWynajmu + "')");
                 }
                     
@@ -114,8 +215,12 @@ namespace SqlDataGenerator
             {
                 string[] p = System.IO.File.ReadAllLines(Program.Path + "WynajemPojedynczegoPojazdu.sql");
 
+                int u = 1;
+
                 foreach (string line in p)
                 {
+                    System.Console.Write("\r{0}%", (u * 100) / p.Length);
+                    u++;
                     file.WriteLine(line);
                 }
                 file.WriteLine();

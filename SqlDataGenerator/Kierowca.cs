@@ -50,6 +50,7 @@ namespace SqlDataGenerator
 
             for (int i = 1; i <= LiczbaKierowcow; i++)
             {
+                System.Console.Write("\r{0}%", ((i) * 100) / LiczbaKierowcow);
                 int im = rnd.Next(1, LiczbaImion + 1);
 
                 Imie = imiona[im];
@@ -153,9 +154,12 @@ namespace SqlDataGenerator
             if (Program.PunktCzasowy == Program.TimePoint.FirstTimePoint)
             {
                 string[] p = System.IO.File.ReadAllLines(Program.Path + "Kierowca.sql");
+                int u = 1;
 
                 foreach (string line in p)
                 {
+                    System.Console.Write("\r{0}%", (u * 100) / p.Length);
+                    u++;
                     file.WriteLine(line);
                 }
                 file.WriteLine();

@@ -60,6 +60,7 @@ namespace SqlDataGenerator
 
             for (int i = 0; i < LiczbaAdresow; i++)
             {
+                System.Console.Write("\r{0}%", ((i+1)*100)/ LiczbaAdresow);
                 int im = rnd.Next(1, LiczbaMiast + 1);
 
                 Miasto = miasta[im];
@@ -109,9 +110,12 @@ namespace SqlDataGenerator
             if (Program.PunktCzasowy == Program.TimePoint.FirstTimePoint)
             {
                 string[] p = System.IO.File.ReadAllLines(Program.Path + "Adres.sql");
-
+                int u = 1;
+                
                 foreach (string line in p)
                 {
+                    System.Console.Write("\r{0}%", (u * 100) / p.Length);
+                    u++;
                     file.WriteLine(line);
                 }
                 file.WriteLine();

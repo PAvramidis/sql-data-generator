@@ -42,6 +42,7 @@ namespace SqlDataGenerator
 
             for (int i = 0; i < LiczbaWynajec; i++)
             {
+                System.Console.Write("\r{0}%", ((i + 1) * 100) / LiczbaWynajec);
                 Data = String.Empty;
 
                 int im = rnd.Next(1990, 2016);
@@ -220,8 +221,12 @@ namespace SqlDataGenerator
             {
                 string[] p = System.IO.File.ReadAllLines(Program.Path + "Wynajem.sql");
 
+                int u = 1;
+
                 foreach (string line in p)
                 {
+                    System.Console.Write("\r{0}%", (u * 100) / p.Length);
+                    u++;
                     file.WriteLine(line);
                 }
                 file.WriteLine();
