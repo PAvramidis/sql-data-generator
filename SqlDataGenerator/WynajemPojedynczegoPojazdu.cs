@@ -19,106 +19,7 @@ namespace SqlDataGenerator
         public WynajemPojedycznegoPojazdu(int n)
         {
             LiczbaWynajecPojedynczegoPojazdu = n;
-        }
-        private bool SprawdzZajetosc(int samochod, int wynajem)
-        {
-            using (StreamReader reader = new StreamReader(Program.PathZajete))
-            {
-                for (int i = 0; i < samochod; i++)
-                {
-                    reader.ReadLine();
-                }
-                string line = reader.ReadLine();
-
-                if (line[wynajem] == '1')
-                    return true;
-                else
-                    return false;
-            }
-        }
-
-        private void ZapiszZajetosc(int samochod, int wynajem)
-        {
-            string line = "";
-            int i = 0;
-            using (StreamReader reader = new StreamReader(Program.PathZajete))
-            {
-                using (StreamWriter writer = new StreamWriter(Program.PathZajeteOutput))
-                {
-                    while ((line = reader.ReadLine()) != null)
-                    {
-                        if (i != samochod)
-                        {
-                            writer.WriteLine(line);
-                            
-                        }
-                        else
-                        {
-                            string newLine = line;
-                            StringBuilder sb = new StringBuilder(newLine);
-                            sb[wynajem] = '1';
-                            newLine = sb.ToString();
-                            writer.WriteLine(newLine);
-                        }
-                        i++;
-
-                    }
-                }
-            }
-
-            File.Delete(Program.PathZajete);
-            File.Move(Program.PathZajeteOutput, Program.PathZajete);
-        }
-
-        private bool SprawdzZajetoscKier(int kierowca, int wynajem)
-        {
-            using (StreamReader reader = new StreamReader(Program.PathZajKierowcy))
-            {
-                for (int i = 0; i < kierowca; i++)
-                {
-                    reader.ReadLine();
-                }
-                string line = reader.ReadLine();
-
-                if (line[wynajem] == '1')
-                    return true;
-                else
-                    return false;
-            }
-        }
-
-        private void ZapiszZajetoscKier(int kierowca, int wynajem)
-        {
-            string line = "";
-            int i = 0;
-            using (StreamReader reader = new StreamReader(Program.PathZajKierowcy))
-            {
-                using (StreamWriter writer = new StreamWriter(Program.PathZajKierowcyOutput))
-                {
-                    while ((line = reader.ReadLine()) != null)
-                    {
-                        if (i != kierowca)
-                        {
-                            writer.WriteLine(line);
-
-                        }
-                        else
-                        {
-                            string newLine = line;
-                            StringBuilder sb = new StringBuilder(newLine);
-                            sb[wynajem] = '1';
-                            newLine = sb.ToString();
-                            writer.WriteLine(newLine);
-                        }
-                        i++;
-
-                    }
-                }
-            }
-
-            File.Delete(Program.PathZajKierowcy);
-            File.Move(Program.PathZajKierowcyOutput, Program.PathZajKierowcy);
-        }
+        }\
         public override void Randomize()
         {
             System.IO.StreamWriter sw;
@@ -150,7 +51,7 @@ namespace SqlDataGenerator
                 Cena = CenaInt.ToString();
                 FkWynajemId = a.ToString();
                 FkPojazdNrRejestracyjny = Program.Pojazdy[b].NrRejestracyjny.ToString();
-               // ZapiszZajetosc(b, a - 1);
+                // ZapiszZajetosc(b, a - 1);
 
                 temp = rnd.Next(1, 4);
                 switch (temp) 

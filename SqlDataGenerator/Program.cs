@@ -57,10 +57,6 @@ namespace SqlDataGenerator
         private const string PathToInsertSql = "D:\\Generator\\Insert.sql";
         private const string PathToSqlT2 = "D:\\Generator\\T2.sql";
         public static string Path = "D:\\Generator\\";
-        public static string PathZajete = "D:\\Generator\\zajete.txt";
-        public static string PathZajKierowcy = "D:\\Generator\\zajeteKierowcy.txt";
-        public static string PathZajeteOutput = "D:\\Generator\\zajeteOutput.txt";
-        public static string PathZajKierowcyOutput = "D:\\Generator\\zajeteKierowcyOutput.txt";
 
         public static TimePoint PunktCzasowy = TimePoint.FirstTimePoint;
         private static Encja[] Encje;
@@ -175,7 +171,6 @@ namespace SqlDataGenerator
             System.Console.WriteLine("Skonczyl sie excel");
 
 
-
             Adresy = new AdresPojedynczy[LiczbaAdresow];
             Pojazdy = new PojazdPojedynczy[LiczbaPojazdow];
 
@@ -190,24 +185,6 @@ namespace SqlDataGenerator
             zajete.AutoFlush = true;
             zajKierowcy.AutoFlush = true;
 
-
-            //for(int i = 0; i < LiczbaPojazdow; i++)
-            //{
-            //    for(int j = 0; j < LiczbaWynajec; j++)
-            //    {
-            //        zajete.Write("0");
-            //    }
-            //    zajete.WriteLine();
-            //}
-
-            //for (int i = 0; i < LiczbaKierowcow; i++)
-            //{
-            //    for (int j = 0; j < LiczbaWynajec; j++)
-            //    {
-            //        zajKierowcy.Write("0");
-            //    }
-            //    zajKierowcy.WriteLine();
-            //}
 
             Encje = new Encja[LiczbaEncji];
 
