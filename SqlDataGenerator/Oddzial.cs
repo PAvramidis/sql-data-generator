@@ -33,6 +33,15 @@ namespace SqlDataGenerator
 
             string line = String.Empty;
 
+            if (Program.JedenPlikWynikowy == false)
+            {
+                sw.WriteLine("USE TransakcjeWynajmu");
+                sw.WriteLine("GO");
+                sw.WriteLine();
+
+                sw.WriteLine("SET ANSI_WARNINGS  OFF;");
+            }
+
             for (int i = 0; i < LiczbaOddzialow; i++)
             {
                 System.Console.Write("\r{0}%", ((i + 1) * 100) / LiczbaOddzialow);
@@ -68,6 +77,10 @@ namespace SqlDataGenerator
                 sw.Flush();
             }
 
+            if (Program.JedenPlikWynikowy == false)
+            {
+                sw.WriteLine("SET ANSI_WARNINGS  OFF;");
+            }
             sw.Close();
         }
 

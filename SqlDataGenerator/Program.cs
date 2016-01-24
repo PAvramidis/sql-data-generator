@@ -31,6 +31,9 @@ namespace SqlDataGenerator
         public const int ADDRESS = 6;
         public const int TELNO = 7;
 
+        public static bool JedenPlikWynikowy = false;
+        public static bool JedenPunktCzasowy = true;
+
         public static int IndexPesel = 2;
         public static int IndexNrRej = 2;
 
@@ -146,7 +149,6 @@ namespace SqlDataGenerator
 
             
             LiczbaWynajecPojedynczegoPojazdu = (LiczbaWynajec * 3) / 2;
-            TablicaZajetosci = new List<int>[LiczbaWynajec];
             LiczbaAdresow = 2 * LiczbaWynajec;
             LiczbaOddzialow = LiczbaAdresow / 20;
             LiczbaKierowcow = 5 * LiczbaOddzialow;
@@ -191,6 +193,13 @@ namespace SqlDataGenerator
             Encje[4] = new Wynajem(LiczbaWynajec);
             Encje[5] = new WynajemPojedycznegoPojazdu(LiczbaWynajecPojedynczegoPojazdu);
 
+            TablicaZajetosci = new List<int>[LiczbaWynajec];
+
+            for (int i = 0; i < TablicaZajetosci.Length; i++)
+            {
+                TablicaZajetosci[i] = new List<int>();
+            }
+
             FileWriter = new StreamWriter(PathToCreateSql);
             FileWriter.AutoFlush = true;
 
@@ -231,61 +240,67 @@ namespace SqlDataGenerator
                 e.Randomize();
                 System.Console.WriteLine();
             }
-
-            FileWriterInsert.WriteLine("USE TransakcjeWynajmu");
-            FileWriterInsert.WriteLine("GO");
-            FileWriterInsert.WriteLine();
-
-            FileWriterInsert.WriteLine("SET ANSI_WARNINGS  OFF;");
-            u = 0;
-            foreach (Encja e in Encje)
+            if (JedenPlikWynikowy == true)
             {
-                System.Console.WriteLine("Encja insert {0}", u);
-                u++;
-                e.Insert(FileWriterInsert);
-                System.Console.WriteLine();
+                FileWriterInsert.WriteLine("USE TransakcjeWynajmu");
+                FileWriterInsert.WriteLine("GO");
+                FileWriterInsert.WriteLine();
+
+                FileWriterInsert.WriteLine("SET ANSI_WARNINGS  OFF;");
+                u = 0;
+                foreach (Encja e in Encje)
+                {
+                    System.Console.WriteLine("Encja insert {0}", u);
+                    u++;
+                    e.Insert(FileWriterInsert);
+                    System.Console.WriteLine();
+                }
+
+                FileWriterInsert.WriteLine("SET ANSI_WARNINGS  OFF;");
             }
 
-            FileWriterInsert.WriteLine("SET ANSI_WARNINGS  OFF;");
+            if (JedenPunktCzasowy == false)
+            {
 
-            //PunktCzasowy = TimePoint.SecondTimePoint;
+                PunktCzasowy = TimePoint.SecondTimePoint;
 
-            //Encja[] EncjeT2 = new Encja[LiczbaEncji];
+                Encja[] EncjeT2 = new Encja[LiczbaEncji];
 
-            //LiczbaKierowcow = LiczbaKierowcowDodane;
-            //zajeciKierowcy = new bool[LiczbaKierowcow];
+                LiczbaKierowcow = LiczbaKierowcowDodane;
+                zajeciKierowcy = new bool[LiczbaKierowcow];
 
-            //Adresy2 = new AdresPojedynczy[LiczbaAdresowDodane];
-            //Pojazdy2 = new PojazdPojedynczy[LiczbaPojazdowDodane];
+                Adresy2 = new AdresPojedynczy[LiczbaAdresowDodane];
+                Pojazdy2 = new PojazdPojedynczy[LiczbaPojazdowDodane];
 
-            //EncjeT2[2] = new Kierowca(LiczbaKierowcowDodane);
-            //EncjeT2[0] = new Adres(LiczbaAdresowDodane);
-            //EncjeT2[1] = new Oddzial(LiczbaOddzialowDodane);
-            //EncjeT2[3] = new Pojazd(LiczbaPojazdowDodane);
-            //EncjeT2[4] = new Wynajem(LiczbaWynajecDodane);
-            //EncjeT2[5] = new WynajemPojedycznegoPojazdu(LiczbaWynajecPojedynczegoPojazduDodane);
-            //foreach (Encja e in EncjeT2)
-            //{
+                EncjeT2[2] = new Kierowca(LiczbaKierowcowDodane);
+                EncjeT2[0] = new Adres(LiczbaAdresowDodane);
+                EncjeT2[1] = new Oddzial(LiczbaOddzialowDodane);
+                EncjeT2[3] = new Pojazd(LiczbaPojazdowDodane);
+                EncjeT2[4] = new Wynajem(LiczbaWynajecDodane);
+                EncjeT2[5] = new WynajemPojedycznegoPojazdu(LiczbaWynajecPojedynczegoPojazduDodane);
+                foreach (Encja e in EncjeT2)
+                {
 
-            //    e.Randomize();
-            //}
+                    e.Randomize();
+                }
 
-            //FileWriterTwo.WriteLine("USE TransakcjeWynajmu");
-            //FileWriterTwo.WriteLine("GO");
-            //FileWriterTwo.WriteLine();
+                FileWriterTwo.WriteLine("USE TransakcjeWynajmu");
+                FileWriterTwo.WriteLine("GO");
+                FileWriterTwo.WriteLine();
 
-            //foreach (Encja e in EncjeT2)
-            //{
-            //    e.Update(FileWriterTwo);
-            //}
+                foreach (Encja e in EncjeT2)
+                {
+                    e.Update(FileWriterTwo);
+                }
 
-            //FileWriterTwo.WriteLine("GO");
-            //FileWriterTwo.WriteLine();
+                FileWriterTwo.WriteLine("GO");
+                FileWriterTwo.WriteLine();
 
-            //foreach (Encja e in EncjeT2)
-            //{
-            //    e.Insert(FileWriterTwo);
-            //}
+                foreach (Encja e in EncjeT2)
+                {
+                    e.Insert(FileWriterTwo);
+                }
+            }
             wb_dest.Save();
             excel_destination.Quit();
             wb_dest_data2.Save();

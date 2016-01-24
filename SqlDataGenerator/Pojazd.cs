@@ -48,6 +48,15 @@ namespace SqlDataGenerator
             int LiczbaModeli = Int32.Parse(modele[0]);
             int im;
 
+            if (Program.JedenPlikWynikowy == false)
+            {
+                sw.WriteLine("USE TransakcjeWynajmu");
+                sw.WriteLine("GO");
+                sw.WriteLine();
+
+                sw.WriteLine("SET ANSI_WARNINGS  OFF;");
+            }
+
             for (int i = 0; i < LiczbaPojazdow; i++)
             {
                 System.Console.Write("\r{0}%", ((i + 1) * 100) / LiczbaPojazdow);
@@ -143,6 +152,10 @@ namespace SqlDataGenerator
                 sw.Flush();
             }
 
+            if (Program.JedenPlikWynikowy == false)
+            {
+                sw.WriteLine("SET ANSI_WARNINGS  OFF;");
+            }
             sw.Close();
         }
 

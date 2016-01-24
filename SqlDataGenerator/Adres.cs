@@ -58,6 +58,15 @@ namespace SqlDataGenerator
             n = ulice[0];
             int LiczbaUlic = Int32.Parse(n);
 
+            if (Program.JedenPlikWynikowy == false)
+            {
+                sw.WriteLine("USE TransakcjeWynajmu");
+                sw.WriteLine("GO");
+                sw.WriteLine();
+
+                sw.WriteLine("SET ANSI_WARNINGS  OFF;");
+            }
+
             for (int i = 0; i < LiczbaAdresow; i++)
             {
                 System.Console.Write("\r{0}%", ((i+1)*100)/ LiczbaAdresow);
@@ -102,6 +111,10 @@ namespace SqlDataGenerator
                 sw.Flush();
             }
 
+            if (Program.JedenPlikWynikowy == false)
+            {
+                sw.WriteLine("SET ANSI_WARNINGS  OFF;");
+            }
             sw.Close();
         }
 
