@@ -65,6 +65,7 @@ namespace SqlDataGenerator
         private static StreamWriter FileWriterTwo;
 
         public static int LiczbaWynajec = 1000000;
+        public static List<int>[] TablicaZajetosci;
         public static int LiczbaWynajecPojedynczegoPojazdu;
         public static int LiczbaAdresow;
         public static int LiczbaOddzialow;
@@ -143,7 +144,9 @@ namespace SqlDataGenerator
                 }
             }
 
+            
             LiczbaWynajecPojedynczegoPojazdu = (LiczbaWynajec * 3) / 2;
+            TablicaZajetosci = new List<int>[LiczbaWynajec];
             LiczbaAdresow = 2 * LiczbaWynajec;
             LiczbaOddzialow = LiczbaAdresow / 20;
             LiczbaKierowcow = 5 * LiczbaOddzialow;
@@ -159,7 +162,7 @@ namespace SqlDataGenerator
 
             shKlienci.Name = "KlienciT1";
             shKlienci2.Name = "KlienciT2";
-
+            /*
             try
             {
                 make_sheets();
@@ -169,7 +172,7 @@ namespace SqlDataGenerator
                 excel_destination.Quit();
             }
             System.Console.WriteLine("Skonczyl sie excel");
-
+            */
 
             Adresy = new AdresPojedynczy[LiczbaAdresow];
             Pojazdy = new PojazdPojedynczy[LiczbaPojazdow];
@@ -177,13 +180,6 @@ namespace SqlDataGenerator
             zajeteAdresy = new bool[Program.LiczbaAdresow];
             zajeciKierowcy = new bool[Program.LiczbaKierowcow];
 
-            StreamWriter zajete;
-            StreamWriter zajKierowcy;
-
-            zajete = new StreamWriter(PathZajete);
-            zajKierowcy = new StreamWriter(PathZajKierowcy);
-            zajete.AutoFlush = true;
-            zajKierowcy.AutoFlush = true;
 
 
             Encje = new Encja[LiczbaEncji];

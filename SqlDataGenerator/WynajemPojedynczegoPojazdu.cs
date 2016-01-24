@@ -19,7 +19,7 @@ namespace SqlDataGenerator
         public WynajemPojedycznegoPojazdu(int n)
         {
             LiczbaWynajecPojedynczegoPojazdu = n;
-        }\
+        }
         public override void Randomize()
         {
             System.IO.StreamWriter sw;
@@ -41,8 +41,9 @@ namespace SqlDataGenerator
                     b = rnd.Next(0, Program.LiczbaPojazdow);
                 }
                 //while (SprawdzZajetosc(b, a-1) == true);
-                while (false) ;
+                while (Program.TablicaZajetosci[a - 1].Contains(b)) ;
 
+                Program.TablicaZajetosci[a - 1].Add(b);
 
                 int CzasNajmuNumeric = rnd.Next(1, 169);
                 CzasNajmu = CzasNajmuNumeric.ToString();
