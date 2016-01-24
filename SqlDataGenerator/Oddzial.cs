@@ -9,12 +9,10 @@ namespace SqlDataGenerator
 {
     class Oddzial : Encja
     {
-        private string NrOddzialu;
         private string TelefonKontaktowy;
         private string FkAdresUlica;
         private string FkAdresKodPocztowy;
         private int LiczbaOddzialow;
-        private string LiczbaFirmKonkurencyjnych;
         private string NumerOddzialuNadrzednego;
         
         public Oddzial(int n)
@@ -63,9 +61,8 @@ namespace SqlDataGenerator
 
                     TelefonKontaktowy += cyfra.ToString();
                 }
-                    LiczbaFirmKonkurencyjnych = rnd.Next(0, 20).ToString();
-                    NumerOddzialuNadrzednego = rnd.Next(1, Program.LiczbaOddzialow).ToString();
-                    sw.WriteLine("insert into Oddzial values(" + "'" + TelefonKontaktowy + "'" + "," + LiczbaFirmKonkurencyjnych + "," + "'" + NumerOddzialuNadrzednego + "'" + "," + "'" + FkAdresUlica + "'" + "," + "'" + FkAdresKodPocztowy + "')");
+                    NumerOddzialuNadrzednego = rnd.Next(1, i+2).ToString();
+                    sw.WriteLine("insert into Oddzial values(" + "'" + TelefonKontaktowy + "'" + "," + NumerOddzialuNadrzednego + "," + "'" + FkAdresUlica + "'" + "," + "'" + FkAdresKodPocztowy + "')");
                 TelefonKontaktowy = String.Empty;
                 sw.Flush();
             }
@@ -80,7 +77,6 @@ namespace SqlDataGenerator
 
             f.WriteLine("\tNrOddzialu INTEGER IDENTITY(1,1) PRIMARY KEY,");
             f.WriteLine("\tTelefonKontaktowy varchar(12),");
-            f.WriteLine("\tLiczbaFirmKonkurencyjnych int,");
             f.WriteLine("\tNumerOddzialuNadrzednego int,");
             f.WriteLine("\tFkAdresUlica varchar(60),");
             f.WriteLine("\tFkAdresKodPocztowy varchar(8),");

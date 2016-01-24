@@ -60,6 +60,12 @@ namespace SqlDataGenerator
 
                 NrRejestracyjny = Program.rejestracje[im];
 
+                if (Program.PunktCzasowy == Program.TimePoint.FirstTimePoint)
+                {
+                    Program.update_value(ref Program.shKupno, Program.IndexNrRej, Program.REG_NUM, NrRejestracyjny);
+                }
+                Program.update_value(ref Program.shKupno2, Program.IndexNrRej++, Program.REG_NUM, NrRejestracyjny);
+
                 int t = rnd.Next(1, 4);
 
                 switch(t)

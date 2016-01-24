@@ -15,6 +15,7 @@ namespace SqlDataGenerator
         private string Cena;
         private string CzasNajmu;
         private int LiczbaWynajecPojedynczegoPojazdu;
+        private string TypWynajmu;
         public WynajemPojedycznegoPojazdu(int n)
         {
             LiczbaWynajecPojedynczegoPojazdu = n;
@@ -29,7 +30,7 @@ namespace SqlDataGenerator
                 sw = new System.IO.StreamWriter(Program.Path + "WynajemPojedynczegoPojazdu2.sql");
             Random rnd = new Random();
 
-            int a, b;
+            int a, b, temp;
 
             for (int i = 0; i < LiczbaWynajecPojedynczegoPojazdu; i++)
             {
@@ -51,23 +52,36 @@ namespace SqlDataGenerator
                 FkPojazdNrRejestracyjny = Program.Pojazdy[b].NrRejestracyjny.ToString();
                 Program.zajete[b, a - 1] = true;
 
+                temp = rnd.Next(1, 4);
+                switch (temp) 
+                { 
+                    case 1:
+                        TypWynajmu = "Przewoz osob";
+                        break;
+                    case 2:
+                        TypWynajmu = "Przewoz zwierzat";
+                        break;
+                    case 3:
+                        TypWynajmu = "Przewoz towarow";
+                        break;
+                }
 
                 do
                 {
                     b = rnd.Next(0, Program.LiczbaKierowcow);
                 }
-                while (Program.zajKierowcy[b, a - 1] == true);
+                while (Program.zajKierowcy[b, a - 1] == true || b == 0);
                 if (b == 0)
                 {
                     
                     FkKierowcaId = "NULL";
-                    sw.WriteLine("insert into WynajemPojedynczegoPojazdu values(" + FkWynajemId + ", '" + FkPojazdNrRejestracyjny + "'," + FkKierowcaId + "," + Cena + "," + CzasNajmu + ")");
+                    sw.WriteLine("insert into WynajemPojedynczegoPojazdu values(" + FkWynajemId + ", '" + FkPojazdNrRejestracyjny + "'," + FkKierowcaId + "," + Cena + "," + CzasNajmu + ",'" + TypWynajmu + "')");
                 }
                 else
                 {
                     FkKierowcaId = (b + 1).ToString();
                     Program.zajKierowcy[b, a - 1] = true;
-                    sw.WriteLine("insert into WynajemPojedynczegoPojazdu values(" + FkWynajemId + ", '" + FkPojazdNrRejestracyjny + "',"  + FkKierowcaId + "," + Cena + "," + CzasNajmu + ")");
+                    sw.WriteLine("insert into WynajemPojedynczegoPojazdu values(" + FkWynajemId + ", '" + FkPojazdNrRejestracyjny + "'," + FkKierowcaId + "," + Cena + "," + CzasNajmu + ",'" + TypWynajmu + "')");
                 }
                     
                 
@@ -88,6 +102,7 @@ namespace SqlDataGenerator
             f.WriteLine("\tFkNumerKierowcy int REFERENCES Kierowca,");
             f.WriteLine("\tCena int,");
             f.WriteLine("\tCzasNajmuWGodzinach varchar(5),");
+            f.WriteLine("\tTypWynajmu varchar(20),");
             f.WriteLine("\tPRIMARY KEY (FkWynajemId, FkPojazdNrRejestracyjny)");
 
             f.WriteLine(")");

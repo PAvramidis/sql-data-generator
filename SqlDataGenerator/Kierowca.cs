@@ -121,8 +121,8 @@ namespace SqlDataGenerator
                         break;
                 }
                 NumerPrawaJazdy = String.Empty;
-                NumerPrawaJazdy += RandomString(4, LITERAL);
-                NumerPrawaJazdy += RandomString(5, NUMERIC);
+                NumerPrawaJazdy += RandomString(4, LITERAL, rnd);
+                NumerPrawaJazdy += RandomString(5, NUMERIC, rnd);
                 FkNumerOddzialu = rnd.Next(1, Program.LiczbaOddzialow).ToString();
 
                 sw.WriteLine("insert into Kierowca values('" + Imie + "'" + ", " + "'" + Nazwisko + "'" + "," + "'" + Data + "'" + "," + "'" + Etat + "'" + "," + "'" + NumerPrawaJazdy + "',"  + FkNumerOddzialu  + ")");
@@ -173,20 +173,19 @@ namespace SqlDataGenerator
             file.WriteLine();
         }
 
-        public static string RandomString(int length, int type)
+        public static string RandomString(int length, int type, Random rnd)
         {
             const string charsLiteral = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
             const string charsNumeric = "123456789";
-            var random = new Random();
             if (type == LITERAL)
             {
                 return new string(Enumerable.Repeat(charsLiteral, length)
-                  .Select(s => s[random.Next(s.Length)]).ToArray());
+                  .Select(s => s[rnd.Next(s.Length)]).ToArray());
             }
             else if (type == NUMERIC)
             {
                 return new string(Enumerable.Repeat(charsNumeric, length)
-                    .Select(s => s[random.Next(s.Length)]).ToArray());
+                    .Select(s => s[rnd.Next(s.Length)]).ToArray());
             }
             else {
                 return "";
